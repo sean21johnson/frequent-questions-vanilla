@@ -68,7 +68,7 @@ function displayData(questionObj) {
 
 	const currentAnswer = document.createElement("p");
 	currentAnswer.classList.add("answer_text");
-
+    currentAnswer.classList.add("hide")
 	currentAnswer.innerText = questionObj.answer;
 
 	bottomContainer.appendChild(currentAnswer);
@@ -83,10 +83,29 @@ function displayData(questionObj) {
 	downArrow.classList.add("fas");
 	downArrow.classList.add("fa-caret-down");
 
+    // Add event listener for the down arrow
+    downArrow.addEventListener("click", () => {
+        downArrow.classList.add("hide");
+        currentAnswer.classList.remove("hide")
+        clearOut.classList.remove("hide");
+    })
+
 	const clearOut = document.createElement("i");
+    clearOut.classList.add("clear_out");
+    clearOut.classList.add("fas");
+    clearOut.classList.add("fa-times")
+    clearOut.classList.add("hide")
+
+    // Add event listener for the clearOut
+    clearOut.addEventListener("click", () => {
+        clearOut.classList.add("hide");
+        currentAnswer.classList.add("hide");
+        downArrow.classList.remove("hide");
+    })
 
 	topContainer.appendChild(currentQuestion);
 	topContainer.appendChild(downArrow);
+    topContainer.appendChild(clearOut);
 
 	questionList.appendChild(questionItem);
 	questionItem.appendChild(fullContainer);

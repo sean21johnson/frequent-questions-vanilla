@@ -31,7 +31,7 @@ li {
     font-weight: 600;
 }
 
-.down_arrow {
+.down_arrow, .clear_out {
     font-size: 40px;
     cursor: pointer;
 }
@@ -41,4 +41,8 @@ li {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.hide {
+    display: none;
 }
