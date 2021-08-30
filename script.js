@@ -88,6 +88,7 @@ function displayData(questionObj) {
         downArrow.classList.add("hide");
         currentAnswer.classList.remove("hide")
         clearOut.classList.remove("hide");
+        questionItem.classList.add("message_background")
     })
 
 	const clearOut = document.createElement("i");
@@ -101,6 +102,7 @@ function displayData(questionObj) {
         clearOut.classList.add("hide");
         currentAnswer.classList.add("hide");
         downArrow.classList.remove("hide");
+        questionItem.classList.remove("message_background")
     })
 
 	topContainer.appendChild(currentQuestion);

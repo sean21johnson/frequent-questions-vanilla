@@ -46,3 +46,7 @@ li {
 .hide {
     display: none;
 }
+
+.message_background {
+    background-color: white;;
+}
